@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor em Blocos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Conversor Universal em Blocos</h2>
+  
+  <div class="input-area">
+    <input type="text" id="numero" placeholder="Ex: 1010, 55, 67, 2A">
+    <button onclick="converter()">Converter</button>
+    <button onclick="limpar()">Limpar</button>
+  </div>
+  
+  <div class="container">
+    <div class="card">
+      <div class="titulo">Binário</div>
+      <div class="saida" id="binario"></div>
+      <div class="explicacao" id="expBinario"></div>
+    </div>
+    
+    <div class="card">
+      <div class="titulo">Decimal</div>
+      <div class="saida" id="decimal"></div>
+      <div class="explicacao" id="expDecimal"></div>
+    </div>
+    
+    <div class="card">
+      <div class="titulo">Octal</div>
+      <div class="saida" id="octal"></div>
+      <div class="explicacao" id="expOctal"></div>
+    </div>
+    
+    <div class="card">
+      <div class="titulo">Hexadecimal</div>
+      <div class="saida" id="hexadecimal"></div>
+      <div class="explicacao" id="expHexadecimal"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
