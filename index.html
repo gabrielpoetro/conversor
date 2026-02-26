@@ -2,44 +2,63 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Conversor em Blocos</title>
+  <title>Conversor com Menu Interativo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Conversor Universal em Blocos</h2>
+  <h2>Conversor Universal com Menu Interativo</h2>
   
   <div class="input-area">
-    <input type="text" id="numero" placeholder="Ex: 1010, 55, 67, 2A">
+    <input type="text" id="numero" placeholder="Ex: 1010, 55, 67, 2A, 101.11">
+    
+    <select id="opcao">
+      <option value="todas">Todas as conversões</option>
+      <option value="binario">Somente Binário</option>
+      <option value="decimal">Somente Decimal</option>
+      <option value="octal">Somente Octal</option>
+      <option value="hexadecimal">Somente Hexadecimal</option>
+      <option value="personalizada">Base Personalizada</option>
+    </select>
+    
+    <input type="number" id="basePersonalizada" placeholder="Base (2-36)" min="2" max="36" style="display:none;">
+    
     <button onclick="converter()">Converter</button>
     <button onclick="limpar()">Limpar</button>
   </div>
   
   <div class="container">
-    <div class="card">
+    <div class="card" id="cardBinario">
       <div class="titulo">Binário</div>
       <div class="saida" id="binario"></div>
       <div class="explicacao" id="expBinario"></div>
     </div>
     
-    <div class="card">
+    <div class="card" id="cardDecimal">
       <div class="titulo">Decimal</div>
       <div class="saida" id="decimal"></div>
       <div class="explicacao" id="expDecimal"></div>
     </div>
     
-    <div class="card">
+    <div class="card" id="cardOctal">
       <div class="titulo">Octal</div>
       <div class="saida" id="octal"></div>
       <div class="explicacao" id="expOctal"></div>
     </div>
     
-    <div class="card">
+    <div class="card" id="cardHexadecimal">
       <div class="titulo">Hexadecimal</div>
       <div class="saida" id="hexadecimal"></div>
       <div class="explicacao" id="expHexadecimal"></div>
     </div>
+    
+    <div class="card" id="cardPersonalizada">
+      <div class="titulo">Base Personalizada</div>
+      <div class="saida" id="personalizada"></div>
+      <div class="explicacao" id="expPersonalizada"></div>
+    </div>
   </div>
   
+  <!-- O script deve ser carregado por último -->
   <script src="script.js"></script>
 </body>
 </html>
